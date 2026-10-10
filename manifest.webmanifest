@@ -1,0 +1,19 @@
+{
+  "name": "Finance",
+  "short_name": "Finance",
+  "description": "月ごとの資産構成を記録するシンプルなWeb台帳",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f1ea",
+  "theme_color": "#f4f1ea",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
