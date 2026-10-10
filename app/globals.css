@@ -2459,7 +2459,7 @@ footer {
     font-size: 17px;
   }
   .workspace-tabs {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 4px;
   }
   .workspace-tabs button {
@@ -2521,7 +2521,7 @@ footer {
   .workspace-tabs button { gap: 4px; }
   .workspace-tabs button svg { width: 18px; height: 18px; }
 
-  .topbar > div:first-child { display: none; }
+  .topbar-context { display: none; }
   .topbar-actions { width: 100%; justify-content: space-between; }
   .sync-control { max-width: 146px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
