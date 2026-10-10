@@ -1,0 +1,13 @@
+// Add this match inside the existing /databases/{database}/documents block.
+// The existing /shared rule must remain unchanged.
+match /personalFinance/{uid} {
+  allow read: if request.auth != null
+    && request.auth.uid == uid
+    && request.auth.token.firebase.sign_in_provider == 'google.com';
+  allow create, update: if request.auth != null
+    && request.auth.uid == uid
+    && request.auth.token.firebase.sign_in_provider == 'google.com'
+    && request.resource.data.keys().hasOnly(['version', 'ledger', 'updatedAt'])
+    && request.resource.data.version == 1
+    && request.resource.data.ledger is map;
+}
